@@ -3,11 +3,11 @@
 
 /*
 TODO #1:
-	1) Build this project - if you have followed the instructions for creating a new project 
+	1)=============== Build this project - if you have followed the instructions for creating a new project 
 	   correctly, then it will build and run
-	2.1) If the build fails, then delete the project's folder CppDevSp17\L1 and 
+	2.1)============== If the build fails, then delete the project's folder CppDevSp17\L1 and 
 	     then recreate the project from scratch, i.e., try again
-	2.3) When the build is successful, open up the file createInstance.h and do TODO #2
+	2.3)============== When the build is successful, open up the file createInstance.h and do TODO #2
 */
 
 //-------------------------------------------------------------------
@@ -123,12 +123,13 @@ int main(int argc, char* argv[])
 
 	/*
 	TODO #3:
-		1) Just after the following declaration of q1 and q2,
+		1)======== Just after the following declaration of q1 and q2,
 		   declare IntegerSequences s1 and s2
-		2) Rebuild - there should be no compiler errors
-		3) Navigate upward to TODO #4
+		2)======== Rebuild - there should be no compiler errors
+		3=========) Navigate upward to TODO #4
 	*/
 	IntegerQueue q1, q2;
+	IntegerSequence s1, s2;
 
 
 	wcout << "q1 = " << q1 << endl;
