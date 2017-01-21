@@ -51,7 +51,7 @@ void loadRandomIntoSequence(IntegerSequence& s, Integer numberToLoad)
 		Integer y = rand() % 1000;
 		s.add(0, y);
 	} // end for
-} // loadRandomIntoQueue
+} // loadRandomIntoSequence
 //-------------------------------------------------------------------
 
 void displayQueue(IntegerQueue& q)
@@ -151,13 +151,15 @@ int main(int argc, char* argv[])
 	wcout << "q1 = " << q1 << " after loading " << numToLoad << " items into q1" << endl << endl;
 	/*
 	TODO #5:
-		1) Copy and paste the 3 lines of code just above this comment, put the copy just below the comment
-		2) Modify the copied lines so that all 3 utilize loadRandomIntoSequence and s1
-		3) Rebuild - there should be no compiler errors
-		4) Run your program - you should see Sequence s1 displayed similar to how Queue q1 is displayed
-		5) Navigate upward to TODO #6
+		1) =====Copy and paste the 3 lines of code just above this comment, put the copy just below the comment
+		2) =====Modify the copied lines so that all 3 utilize loadRandomIntoSequence and s1
+		3) =====Rebuild - there should be no compiler errors
+		4) =====Run your program - you should see Sequence s1 displayed similar to how Queue q1 is displayed
+		5) =====Navigate upward to TODO #6
 	*/
-
+	wcout << "s1 = " << s1 << endl;
+	loadRandomIntoSequence(s1, numToLoad);
+	wcout << "s1 = " << s1 << " after loading " << numToLoad << " items into s1" << endl << endl;
 
 
 
