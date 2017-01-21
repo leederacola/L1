@@ -26,18 +26,32 @@ void loadRandomIntoQueue(IntegerQueue& q, Integer numberToLoad)
 
   /*
   TODO #4:
-	  1) Copy and paste the entire loadRandomIntoQueue operation that is just above this comment,
+	  1) =======Copy and paste the entire loadRandomIntoQueue operation that is just above this comment,
 		 put the copied operation just below this comment 
-	  2) Change the name of the copied version to loadRandomIntoSequence
-	  3) Change loadRandomIntoSequence as outlined in the following steps: 4 - 7
-	  4) Change loadRandomIntoSequence's 1st formal parameter so that it is an IntegerSequence
-	  5) Change the first formal parameter's name to s
-	  6) Change all comments that refernce q so that they reference s instead
-	  7) Change the for loop so that it adds the integers to s at location zero each time through loop
-	  8) Rebuild - there should be no compiler errors
-	  9) Navigate back down to the main operation and do TODO #5
+	  2) =======Change the name of the copied version to loadRandomIntoSequence
+	  3)========Change loadRandomIntoSequence as outlined in the following steps: 4 - 7
+	  4) =======Change loadRandomIntoSequence's 1st formal parameter so that it is an IntegerSequence
+	  5) =======Change the first formal parameter's name to s
+	  6) =======Change all comments that refernce q so that they reference s instead
+	  7) =======Change the for loop so that it adds the integers to s at location zero each time through loop
+	  8) =======Rebuild - there should be no compiler errors
+	  9) =======Navigate back down to the main operation and do TODO #5
   */
 
+
+void loadRandomIntoSequence(IntegerSequence& s, Integer numberToLoad)
+//! replaces s
+//! restores numberToLoad
+//! requires: numberToLoad >= 0
+//! ensures: |s| = numberToLoad and s contains integers generated from rand() function
+{
+	for (int k = 0; k < numberToLoad; k++) 
+	{
+
+		Integer y = rand() % 1000;
+		s.add(0, y);
+	} // end for
+} // loadRandomIntoQueue
 //-------------------------------------------------------------------
 
 void displayQueue(IntegerQueue& q)
