@@ -77,19 +77,42 @@ void displayQueue(IntegerQueue& q)
 
   /*
   TODO #6:
-	  1) Copy and paste the entire displayQueue operation that is just above this comment,
+	  1) =====Copy and paste the entire displayQueue operation that is just above this comment,
 	     put the copied operation just below this comment
-	  2) Change the name of the copied version to displaySequence
-	  3) Change displaySequence as outlined in the following steps: 4 - 9
-	  4) Change displaySequence's formal parameter so that it is an IntegerSequence
-	  5) Change the formal parameter's name to s
-	  6) Change all comments that refernce q so that they reference s instead
-	  7) Change local variable qTemp to sTemp and change its type to IntegerSequence
-	  8) Remove items from s at position zero
-	  9) Add the removed items to sTemp so that the order of items is not changed
+	  2) =====Change the name of the copied version to displaySequence
+	  3) =====Change displaySequence as outlined in the following steps: 4 - 9
+	  4) =====Change displaySequence's formal parameter so that it is an IntegerSequence
+	  5) =====Change the formal parameter's name to s
+	  6) =====Change all comments that refernce q so that they reference s instead
+	  7) =====Change local variable qTemp to sTemp and change its type to IntegerSequence
+	  8) =====Remove items from s at position zero
+	  9) =====Add the removed items to sTemp so that the order of items is not changed
 	  10) Rebuild - there should be no compiler errors
 	  11) Navigate back down to main and do TODO #7
   */
+void displaySequence(IntegerSequence& s)
+//! restores s
+//! ensures: contents of s are displayed, separated by commas
+{
+	IntegerSequence sTemp;
+
+	wcout << "<";
+	for (int k = 0, z = s.length(); k < z; k++) 
+	{
+		Integer y;
+		s.remove(0, y); //remove items from s at pos 0
+		
+		wcout << y;
+		if (s.length() > 0) 
+		{
+			wcout << ",";
+		} // end if
+		sTemp.add(k, y);  //add removed item y to pos k in sTemp
+	} // end for
+	
+	wcout << ">";
+	s.transferFrom(sTemp);
+} // displayQueue
 
 //-------------------------------------------------------------------
 
