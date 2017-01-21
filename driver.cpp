@@ -124,18 +124,45 @@ void displaySequence(IntegerSequence& s)
 	   4) Navigate back down to main and do TODO #9
   */
 
-/*
+
 void moveLargestToFront(IntegerSequence& s)
 //! updates s
 //! requires: |s| > 0
 //! ensures: the largest value found in s is moved to position zero and
 //!          perms(#s, s)
 {
-	// Insert implementation code here
+	Integer largest, count, temp;	//stores current largest, counts up to s.length, hold value for teting
+	{
+		while (count < s.length())
+		{
+			s.remove(0,temp);
+			if (temp >= largest)
+			{
+				largest = temp;    //temp > largest, assign new largest
+			}
+			else  //temp < largest...
+			{
+				s.add((s.length() - 1), temp); // put temp in back of the sequence........
+			}
+
+			count++;
+		}
+		s.add(0, largest);  //add largest to front of sequence
+		
+		
+		
+	
+	}//end for loop
+
+	
+
+
+
+
 } // moveLargestToFront
 
   //-------------------------------------------------------------------
-
+/*
 void reverse(IntegerSequence& s)
 //! updates s
 //! ensures: s = rev(#s)
@@ -195,7 +222,7 @@ int main(int argc, char* argv[])
 		2) =====Modify the copied lines so that they utilize displaySequence and s1
 		3) =====Rebuild - there should be no compiler errors
 		4) =====Run your program - you should see Sequence s1 displayed similar to how Queue q1 is displayed
-		5) Navigate upward to TODO #8
+		5) =====Navigate upward to TODO #8
 	*/
 	wcout << "Display s1 using displaySequence: ";
 	displaySequence(s1);
