@@ -87,8 +87,8 @@ void displayQueue(IntegerQueue& q)
 	  7) =====Change local variable qTemp to sTemp and change its type to IntegerSequence
 	  8) =====Remove items from s at position zero
 	  9) =====Add the removed items to sTemp so that the order of items is not changed
-	  10) Rebuild - there should be no compiler errors
-	  11) Navigate back down to main and do TODO #7
+	  10) =====Rebuild - there should be no compiler errors
+	  11)===== Navigate back down to main and do TODO #7
   */
 void displaySequence(IntegerSequence& s)
 //! restores s
@@ -191,13 +191,15 @@ int main(int argc, char* argv[])
 	wcout << endl << endl;
 	/*
 	TODO #7:
-		1) Copy and paste the 3 lines of code just above this comment, put the copy just below the comment
-		2) Modify the copied lines so that they utilize displaySequence and s1
-		3) Rebuild - there should be no compiler errors
-		4) Run your program - you should see Sequence s1 displayed similar to how Queue q1 is displayed
+		1)===== Copy and paste the 3 lines of code just above this comment, put the copy just below the comment
+		2) =====Modify the copied lines so that they utilize displaySequence and s1
+		3) =====Rebuild - there should be no compiler errors
+		4) =====Run your program - you should see Sequence s1 displayed similar to how Queue q1 is displayed
 		5) Navigate upward to TODO #8
 	*/
-
+	wcout << "Display s1 using displaySequence: ";
+	displaySequence(s1);
+	wcout << endl << endl;
 
 
 
