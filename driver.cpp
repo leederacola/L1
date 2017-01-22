@@ -136,17 +136,19 @@ void moveLargestToFront(IntegerSequence& s)
 		while (count < s.length())
 		{
 			s.remove(0,temp);
-			if (temp >= largest)
-			{
-				largest = temp;    //temp > largest, assign new largest
+			if (temp > largest)
+			{					
+				largest = temp;   //temp > largest, assign new largest				!!!!!!!!does not add item when there is a new large!!!!!!!!!!!all attempts to fix have failed!!!!!!!!						
 			}
 			else  //temp < largest...
 			{
 				s.add((s.length() - 1), temp); // put temp in back of the sequence........
 			}
-
+			wcout << "temp " << temp << "\n";
+			wcout << "large " << largest << "\n";
 			count++;
 		}
+		
 		s.add(0, largest);  //add largest to front of sequence
 	}//end while loop
 } // moveLargestToFront
@@ -242,10 +244,11 @@ int main(int argc, char* argv[])
 		   largest item has been moved to the front
 		5) Navigate downward to TODO #10
 	
-
-	wcout << "s1 = " << s1 << " before moving largest to the front" << endl;
-	wcout << "s1 = " << s1 << " with largest at the front" << endl << endl;
 	*/
+	wcout << "s1 = " << s1 << " before moving largest to the front" << endl;
+	moveLargestToFront(s1);
+	wcout << "s1 = " << s1 << " with largest at the front" << endl << endl;
+	
 
 
 
