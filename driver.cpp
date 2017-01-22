@@ -148,29 +148,30 @@ void moveLargestToFront(IntegerSequence& s)
 			count++;
 		}
 		s.add(0, largest);  //add largest to front of sequence
-		
-		
-		
-	
-	}//end for loop
-
-	
-
-
-
-
+	}//end while loop
 } // moveLargestToFront
 
+
+
   //-------------------------------------------------------------------
-/*
+
 void reverse(IntegerSequence& s)
 //! updates s
 //! ensures: s = rev(#s)
 {
-	// Insert implementation code here
+	IntegerSequence sTemp;
+	Integer count, temp;
+	
+	while (count < s.length());
+	{
+		s.remove(0, temp);	//revove from first
+		sTemp.add(0, temp);	//add to new first
+		count++;
+	}
+	s.transferFrom(sTemp);
 } // reverse
 
-*/
+
 
 //-------------------------------------------------------------------
 // main executable body
