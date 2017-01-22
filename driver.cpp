@@ -144,8 +144,8 @@ void moveLargestToFront(IntegerSequence& s)
 			{
 				s.add((s.length() - 1), temp); // put temp in back of the sequence........
 			}
-			wcout << "temp " << temp << "\n";
-			wcout << "large " << largest << "\n";
+			//wcout << "temp " << temp << "\n";
+			//wcout << "large " << largest << "\n";
 			count++;
 		}
 		
@@ -163,14 +163,14 @@ void reverse(IntegerSequence& s)
 {
 	IntegerSequence sTemp;
 	Integer count, temp;
-	
-	while (count < s.length());
+	Integer len = s.length();
+	for (count = 0; count < len; count++)
 	{
-		s.remove(0, temp);	//revove from first
-		sTemp.add(0, temp);	//add to new first
-		count++;
+		s.remove(0, temp);
+		sTemp.add(0, temp);
+		
 	}
-	s.transferFrom(sTemp);
+	s = sTemp;
 } // reverse
 
 
@@ -261,6 +261,9 @@ int main(int argc, char* argv[])
 		5) Navigate downward to TODO #11
 	*/
 
+	wcout << "s1 = " << s1 << " before reverse operation" << endl;
+	reverse(s1);
+	wcout << "s1 = " << s1 << " after reverse operation" << endl << endl;
 
 
 	system("pause");
