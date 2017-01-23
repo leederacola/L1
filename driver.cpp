@@ -133,19 +133,22 @@ void moveLargestToFront(IntegerSequence& s)
 {
 	Integer largest, count, temp;	//stores current largest, counts up to s.length, hold value for teting
 	{
+		s.remove(0, largest);
 		while (count < s.length())
 		{
 			s.remove(0,temp);
 			if (temp > largest)
 			{					
-				largest = temp;   //temp > largest, assign new largest				!!!!!!!!does not add item when there is a new large!!!!!!!!!!!all attempts to fix have failed!!!!!!!!						
+				//!!!!!!!!does not add item when there is a new large!!!!!!!!!!!all attempts to fix have failed!!!!!!!!
+				s.add(s.length() - 1, largest);
+				largest = temp;   //temp > largest, assign new largest										
 			}
 			else  //temp < largest...
 			{
 				s.add((s.length() - 1), temp); // put temp in back of the sequence........
 			}
-			//wcout << "temp " << temp << "\n";
-			//wcout << "large " << largest << "\n";
+			wcout << "temp " << temp << "\n";
+			wcout << "large " << largest << "\n";
 			count++;
 		}
 		
@@ -254,11 +257,11 @@ int main(int argc, char* argv[])
 
 	/*
 	TODO #10:
-		1) Copy and paste the 3 lines of code that you ended up with by doing "TODO #9" 
-		2) Change the procedure call to in the middle line so that a call is made to operation reverse
-	    3) Rebuild and edit until all compiler errors are eliminated
-		4) Run your program - you should see Sequence s1 displayed in reverse order
-		5) Navigate downward to TODO #11
+		1) =====Copy and paste the 3 lines of code that you ended up with by doing "TODO #9" 
+		2) =====Change the procedure call to in the middle line so that a call is made to operation reverse
+	    3) =====Rebuild and edit until all compiler errors are eliminated
+		4) =====Run your program - you should see Sequence s1 displayed in reverse order
+		5) =====Navigate downward to TODO #11
 	*/
 
 	wcout << "s1 = " << s1 << " before reverse operation" << endl;
