@@ -3,21 +3,6 @@
 
 //-------------------------------------------------------------------
 
-void loadRandomIntoQueue(IntegerQueue& q, Integer numberToLoad)
-//! replaces q
-//! restores numberToLoad
-//! requires: numberToLoad >= 0
-//! ensures: |q| = numberToLoad and q contains integers generated from rand() function
-{
-	for (int k = 0; k < numberToLoad; k++) {
-		Integer y = rand() % 1000;
-		q.enqueue(y);
-	} // end for
-} // loadRandomIntoQueue
-
-
-
-
 void loadRandomIntoSequence(IntegerSequence& s, Integer numberToLoad)
 //! replaces s
 //! restores numberToLoad
@@ -31,29 +16,8 @@ void loadRandomIntoSequence(IntegerSequence& s, Integer numberToLoad)
 		s.add(0, y);
 	} // end for
 } // loadRandomIntoSequence
+
 //-------------------------------------------------------------------
-
-void displayQueue(IntegerQueue& q)
-//! restores q
-//! ensures: contents of q are displayed, separated by commas
-{
-	IntegerQueue qTemp;
-
-	wcout << "<";
-	for (int k = 0, z = q.length(); k < z; k++) {
-		Integer y;
-
-		q.dequeue(y);
-		wcout << y;
-		if (q.length() > 0) {
-			wcout << ",";
-		} // end if
-		qTemp.enqueue(y);
-	} // end for
-	wcout << ">";
-	q.transferFrom(qTemp);
-} // displayQueue
-
 
 void displaySequence(IntegerSequence& s)
 //! restores s
@@ -80,8 +44,6 @@ void displaySequence(IntegerSequence& s)
 } // displayQueue
 
 //-------------------------------------------------------------------
-
-
 
 void moveLargestToFront(IntegerSequence& s)
 //! updates s
@@ -114,9 +76,7 @@ void moveLargestToFront(IntegerSequence& s)
 	}//end while loop
 } // moveLargestToFront
 
-
-
-  //-------------------------------------------------------------------
+ //-------------------------------------------------------------------
 
 void reverse(IntegerSequence& s)
 //! updates s
@@ -129,10 +89,16 @@ void reverse(IntegerSequence& s)
 	{
 		s.remove(0, temp);
 		sTemp.add(0, temp);
-		
 	}
 	s = sTemp;
 } // reverse
+
+
+
+
+
+
+
 
 
 
@@ -171,15 +137,3 @@ int main(int argc, char* argv[])
 	system("pause");
 	return 0;
 }	// end main
-
-
-	/*
-	TODO #11:
-		1) Eliminate from this file all "TODO" comments
-		2) Rebuild and run - there should be no compiler errors
-		3) Eliminate from this file all lines that have to do with Queue
-		4) Rebuild and run - there should be no compiler errors
-		5) Your output should now look similar to the output from L1Sol.exe except
-		   that the random integers might be different
-		6) Go back to the file createInstance.h and do TODO #12
-	*/
