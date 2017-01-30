@@ -94,6 +94,23 @@ void reverse(IntegerSequence& s)
 } // reverse
 
 
+/* practice quized operation subtract
+
+void subtract(IntegerSequence& s, Integer toSub)
+//! updates s
+//! restores x
+//! ensures: s = s# with all values of s reduced by toSub
+{
+	Integer count, temp;
+	Integer len = s.length();
+	for (count = 0; count < len; count++)
+	{
+		s.remove(0, temp);  //remove first save as temp
+		temp = (temp - toSub);		//subtract toSub from temp
+		s.add((len-1), temp);	//add new temp to back
+	}//end for
+}//end suntract
+*/
 
 
 
@@ -133,6 +150,20 @@ int main(int argc, char* argv[])
 	wcout << "s1 = " << s1 << " before reverse operation" << endl;
 	reverse(s1);
 	wcout << "s1 = " << s1 << " after reverse operation" << endl << endl;
+
+	//practice quiz operation sub
+	Integer y = 39;
+	s2.add(s2.length(), y);
+	y = 5;
+	s2.add(s2.length(), y);
+	y = 100;
+	s2.add(s2.length(), y);
+	y = -2;
+	s2.add(s2.length(), y);
+
+	wcout << "s2 = " << s2 << " before sub operation" << endl;
+	subtract(s2, 10);
+	wcout << "s2 = " << s2 << " after sub operation" << endl << endl;
 
 	system("pause");
 	return 0;
