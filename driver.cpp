@@ -112,10 +112,7 @@ void subtract(IntegerSequence& s, Integer toSub)
 }//end suntract
 */
 
-void moveItemsFromS1toS2(IntegerSequence& s1, IntegerSequence& s2)
-{
 
-}
 
 
 
@@ -163,11 +160,11 @@ int main(int argc, char* argv[])
 	s2.add(s2.length(), y);
 	y = -2;
 	s2.add(s2.length(), y);
-	/*
+
 	wcout << "s2 = " << s2 << " before sub operation" << endl;
 	subtract(s2, 10);
 	wcout << "s2 = " << s2 << " after sub operation" << endl << endl;
-	*/
+
 	system("pause");
 	return 0;
 }	// end main
