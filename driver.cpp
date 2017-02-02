@@ -94,6 +94,23 @@ void reverse(IntegerSequence& s)
 } // reverse
 
 
+// practice quized operation subtract
+
+void subtract(IntegerSequence& s, Integer toSub)
+//! updates s
+//! restores x
+//! ensures: s = s# with all values of s reduced by toSub
+{
+	Integer count, temp;
+	Integer len = s.length();
+	for (count = 0; count < len; count++)
+	{
+		s.remove(0, temp);  //remove first
+		(temp - toSub);		//subtract toSub from temp
+		s.add(len, temp);	//add new temp to back
+	}//end for
+}//end suntract
+
 
 
 
