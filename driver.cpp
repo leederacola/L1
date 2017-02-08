@@ -94,7 +94,7 @@ void reverse(IntegerSequence& s)
 } // reverse
 
 
-/* practice quized operation subtract
+/* practice quizes operation subtract
 
 void subtract(IntegerSequence& s, Integer toSub)
 //! updates s
@@ -110,7 +110,7 @@ void subtract(IntegerSequence& s, Integer toSub)
 		s.add((len-1), temp);	//add new temp to back
 	}//end for
 }//end suntract
-*/
+
 
 void moveItemsFromS1ToS2(IntegerSequence& s1, IntegerSequence& s2)
 //! updates s1
@@ -141,7 +141,7 @@ void moveItemsFromS1ToS2(IntegerSequence& s1, IntegerSequence& s2)
 		}//end if
 	}//end for
 }//end moveItems...
-
+*/
 
 
 
@@ -179,7 +179,7 @@ int main(int argc, char* argv[])
 	wcout << "s1 = " << s1 << " after reverse operation" << endl << endl;
 
 	
-	//practice 
+	/*practice 
 	Integer y = 47;
 	s2.add(s2.length(), y);
 	y = 10;
@@ -196,11 +196,12 @@ int main(int argc, char* argv[])
 	s2.add(s2.length(), y);
 	y = 18;
 	s3.add(0, y);
-	/*
+	
+
 	wcout << "s2 = " << s2 << " before sub operation" << endl;
 	subtract(s2, 10);
 	wcout << "s2 = " << s2 << " after sub operation" << endl << endl;
-	*/
+	
 	wcout << " before moveItemsfromS1toS2" << endl;
 	wcout << s2 << endl;
 	wcout <<  s3 << endl;
@@ -208,7 +209,7 @@ int main(int argc, char* argv[])
 	wcout << " after moveItemsfromS1toS2" << endl;
 	wcout << s2 << endl;
 	wcout << s3 << endl;
-	
+	*/
 
 
 	system("pause");
