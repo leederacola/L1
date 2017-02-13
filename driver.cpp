@@ -110,7 +110,7 @@ int main(int argc, char* argv[])
 	} // end if
 
 	
-	IntegerSequence s1, s2, s3;
+	IntegerSequence s1, s2;
 	
 	wcout << "s1 = " << s1 << endl;
 	loadRandomIntoSequence(s1, numToLoad);
