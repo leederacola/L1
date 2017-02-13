@@ -59,7 +59,6 @@ void moveLargestToFront(IntegerSequence& s)
 			s.remove(0,temp);
 			if (temp > largest)
 			{					
-				//!!!!!!!!does not add item when there is a new large!!!!!!!!!!!all attempts to fix have failed!!!!!!!!
 				s.add(s.length() - 1, largest);
 				largest = temp;   //temp > largest, assign new largest										
 			}
@@ -94,55 +93,6 @@ void reverse(IntegerSequence& s)
 } // reverse
 
 
-/* practice quizes operation subtract
-
-void subtract(IntegerSequence& s, Integer toSub)
-//! updates s
-//! restores x
-//! ensures: s = s# with all values of s reduced by toSub
-{
-	Integer count, temp;
-	Integer len = s.length();
-	for (count = 0; count < len; count++)
-	{
-		s.remove(0, temp);  //remove first save as temp
-		temp = (temp - toSub);		//subtract toSub from temp
-		s.add((len-1), temp);	//add new temp to back
-	}//end for
-}//end suntract
-
-
-void moveItemsFromS1ToS2(IntegerSequence& s1, IntegerSequence& s2)
-//! updates s1
-//! replaces s2
-//! ensures: all items in #s1 located in odd numbered positions  
-//!          have been removed and put into s2 in same order and
-//!          the items remaining in s1 are in the same order as 
-//!          they were in #s1
-{
-	Integer count, temp, posCount;
-	IntegerSequence sTemp;
-	Integer len = s1.length();
-	
-	s2 = sTemp;  //clear to replace s2 so it can up updates
-
-	for (count = 0; count < len; count++)
-	{
-		s1.remove(0, temp);
-		if (posCount % 2 == 1) //if pos is odd
-		{
-			s2.add(s2.length(), temp); //add back of s2
-			posCount++;
-		}
-		else // pos is even
-		{
-			s1.add(s1.length(), temp);  //add to back of s1
-			posCount++;
-		}//end if
-	}//end for
-}//end moveItems...
-*/
-
 
 
 
@@ -174,43 +124,11 @@ int main(int argc, char* argv[])
 	moveLargestToFront(s1);
 	wcout << "s1 = " << s1 << " with largest at the front" << endl << endl;
 	
-	wcout << "s1 = " << s1 << " before reverse operation" << endl;
+	wcout << "s1 = " << s1 << " before reversing the order" << endl;
 	reverse(s1);
-	wcout << "s1 = " << s1 << " after reverse operation" << endl << endl;
+	wcout << "s1 = " << s1 << " with items in reverse order" << endl << endl;
 
 	
-	/*practice 
-	Integer y = 47;
-	s2.add(s2.length(), y);
-	y = 10;
-	s2.add(s2.length(), y);
-	y = 57;
-	s2.add(s2.length(), y);
-	y = 9;
-	s2.add(s2.length(), y);
-	y = 67;
-	s2.add(s2.length(), y);
-	y = 8;
-	s2.add(s2.length(), y);
-	y = 0;
-	s2.add(s2.length(), y);
-	y = 18;
-	s3.add(0, y);
-	
-
-	wcout << "s2 = " << s2 << " before sub operation" << endl;
-	subtract(s2, 10);
-	wcout << "s2 = " << s2 << " after sub operation" << endl << endl;
-	
-	wcout << " before moveItemsfromS1toS2" << endl;
-	wcout << s2 << endl;
-	wcout <<  s3 << endl;
-	moveItemsFromS1ToS2(s2, s3);
-	wcout << " after moveItemsfromS1toS2" << endl;
-	wcout << s2 << endl;
-	wcout << s3 << endl;
-	*/
-
 
 	system("pause");
 	return 0;
